@@ -1,0 +1,14 @@
+ <html>
+<title>
+Print Name & Age
+</title>	
+<body>
+<script>
+var a,b;
+a=prompt("Enter your Name");
+b=prompt("Enter your Age");
+document.write("Enter your Name="+a+"<br>");
+document.write("Enter your Age="+b);
+</script>
+</body>
+</html>
