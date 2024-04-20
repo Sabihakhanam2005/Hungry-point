@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+  container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+    .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+		.container {
+             BACKGROUND-COLOR:WHITE;
+HEIGHT:500PX;
+WIDTH:700PX;
+BORDER:5PX SOLID BLACK;
+MARGIN:60PX 200PX 200PX 450PX;
+cursor:pointer;
+}
+.container:hover {
+opacity:0.55;
+}
+BODY {
+background-image:URL("https://mytable.world/wp-content/uploads/2022/06/Restaurant-Reservation-Services.jpg");
+background-position:right;
+background-size:100% 135%;
+background-repeat:no-repeat;
+}
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+button {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 8px;
+	height:20px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+	height:50px;
+	font-size:22px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#error {
+    color: red;
+}
+		HEADER {
+font-family:algerian;
+FONT-SIZE:60PX;
+FONT-WEIGHT:BOLDER;
+color:blue;
+cursor:pointer;
+}
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  MARGIN-left:700px;
+  margin-bottom:10px;
+}
+
+a:hover, a:active {
+  background-color: forestgreen;
+}
+</style>
+</head>
+<body>
+<hr>
+<HEADER><CENTER>RESERVE YOUR TABLE</HEADER></CENTER><HR>
+    <div class="container">
+        <h1><center>Restaurant Reservation<center></h1>
+        <form id="reservationForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
+            <label for="time">Time:</label>
+            <input type="time" id="time" required>
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" min="1" required>
+            <button type="submit">Make Reservation</button>
+        </form>
+        <p id="message"></p>
+    </div>
+
+    <script>document.getElementById("reservationForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    var name = document.getElementById("name").value;
+    var date = document.getElementById("date").value;
+    var time = document.getElementById("time").value;
+    var guests = document.getElementById("guests").value;
+
+    // Here, you can implement your logic for handling the reservation, such as sending the data to a server.
+
+    // For demonstration purposes, let's just display a success message.
+    var message = "Reservation successful! " + name + " has reserved a table for " + guests + " guests on " + date + " at " + time + ".";
+    document.getElementById("message").innerText = message;
+});
+</script>
+<a href="index.html">HOME PAGE</a>
+</body>
+</html>
